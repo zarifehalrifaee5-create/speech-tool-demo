@@ -1,8 +1,9 @@
-// Web Speech API Example
+// Modified from MDN web Speech API basic examples
 const speakButton = document.getElementById('speakButton');
-const textToSpeak = "Hello, this is a simple speech synthesis example.";
+const stopButton = document.getElementById('stopButton');
+const textInput = document.getElementById('textInput');
 
 speakButton.addEventListener('click', () => {
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+    const utterance = new SpeechSynthesisUtterance(textInput.value);
     speechSynthesis.speak(utterance);
 });
